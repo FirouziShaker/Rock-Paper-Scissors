@@ -9,14 +9,20 @@ options= ["rock","paper","scissors"]
 while True:
     user_input= input("Type Rock/Paper/Scissors or Q to quit: ").lower()
     
+    
+    #If the input was q , go out 
     if user_input== "q":
-        break        
+        break  
+          
+    #If the input was not in the list of options start again 
     if user_input not in options:
         continue
     
+    #choice a random number between 0,1,2
+          # rock=0 , paper=1 , scissors=2
     random_number=random.randint(0,2)
-      # rock=0 , paper=1 , scissors=2
       
+      #conforming the random number, choice a item of options
     computer_pick = options[random_number]
     print("Computer picked" , computer_pick + ".")
     
